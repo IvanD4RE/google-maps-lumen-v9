@@ -71,7 +71,7 @@ class WebService{
      */
     public function setEndpoint( $key = 'json' ){
 
-        $this->endpoint = Config::get("googlemaps.endpoint.{$key}", 'json?');
+        $this->endpoint = config("googlemaps.endpoint.{$key}", 'json?');
 
         return $this;
     }
@@ -223,20 +223,20 @@ class WebService{
             $this->setEndpoint();
 
             // set web service parameters
-            $this->service = Config::get('googlemaps.service.'.$service);
+            $this->service = config('googlemaps.service.'.$service);
 
             // is service key set, use it, otherwise use default key
             $this->key = empty( $this->service['key'] )
-                         ? Config::get('googlemaps.key')
+                         ? config('googlemaps.key')
                          : $this->service['key'];
 
             // set service url
             $this->requestUrl = $this->service['url'];
 
             // is ssl_verify_peer key set, use it, otherwise use default key
-            $this->verifySSL = empty(Config::get('googlemaps.ssl_verify_peer'))
+            $this->verifySSL = empty(config('googlemaps.ssl_verify_peer'))
                             ? FALSE
-                            : Config::get('googlemaps.ssl_verify_peer');
+                            : config('googlemaps.ssl_verify_peer');
 
             $this->clearParameters();
     }
@@ -265,7 +265,7 @@ class WebService{
             }
 
             // Validate Endpoint
-            $endpointCount = count(Config::get('googlemaps.endpoint', []));
+            $endpointCount = count(config('googlemaps.endpoint', []));
             $endpointsKeyExists = Config::has('googlemaps.endpoint');
 
             if($endpointsKeyExists === false || $endpointCount < 1){
