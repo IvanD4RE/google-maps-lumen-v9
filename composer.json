@@ -1,7 +1,7 @@
 {
-	"name": "alexpechkarev/google-maps",
+	"name": "ndrd/google-maps-lumen",
 	"description": "Collection of Google Maps API Web Services for Laravel",
-	"version": "8.0",
+	"version": "8.1",
 	"keywords": [
 		"google maps api",
 		"google maps api for laravel",
