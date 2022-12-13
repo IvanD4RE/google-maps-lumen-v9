@@ -1,7 +1,7 @@
 {
-	"name": "ndrd/google-maps-lumen",
+	"name": "ivand4re/google-maps-lumen-v9",
 	"description": "Collection of Google Maps API Web Services for Laravel",
-	"version": "8.1",
+	"version": "9.0",
 	"keywords": [
 		"google maps api",
 		"google maps api for laravel",
@@ -26,8 +26,8 @@
 	],
 	"minimum-stability": "stable",
 	"require": {
-		"illuminate/support": "^8.0",
-		"illuminate/config": "^8.0",
+		"illuminate/support": "^9.43",
+		"illuminate/config": "^9.43",
 		"alexpechkarev/geometry-library" : "^1.0.2",
 		"jbroadway/urlify": "^1.1",
 		"ext-json": "*",
